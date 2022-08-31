@@ -1,15 +1,16 @@
 import React from "react";
 import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
-import { useBanner } from "../zerve/DemoStore";
+import { useHeadline } from "../zerve/DemoStore";
+import { HumanText } from "@zerve/react-native-content/HumanText";
 
 export default function Home() {
-  const { data, isLoading } = useBanner({
+  const { data, isLoading } = useHeadline({
     onError: (err) => alert(err),
   });
   return (
     <View style={styles.container}>
       {isLoading ? <ActivityIndicator /> : null}
-      <Text style={styles.headline}>{data}</Text>
+      {data && <HumanText value={data} />}
     </View>
   );
 }

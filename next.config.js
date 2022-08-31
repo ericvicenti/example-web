@@ -1,4 +1,6 @@
-module.exports = {
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
   webpack: (config) => {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
@@ -15,3 +17,9 @@ module.exports = {
     return config;
   },
 };
+
+const withTM = require("next-transpile-modules")([
+  "@zerve/react-native-content",
+]);
+
+module.exports = withTM(nextConfig);

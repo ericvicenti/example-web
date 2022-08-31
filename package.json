@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@zerve/client": "^0.1.0-alpha.3",
+    "@zerve/react-native-content": "^0.1.0-alpha.3",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -24,6 +25,7 @@
     "babel-plugin-react-native-web": "^0.18.9",
     "eslint": "8.23.0",
     "eslint-config-next": "12.2.5",
+    "next-transpile-modules": "^9.0.0",
     "typescript": "^4.8.2"
   },
   "zerve": {
