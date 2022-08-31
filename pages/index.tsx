@@ -1,10 +1,15 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
+import { useBanner } from "../zerve/DemoStore";
 
 export default function Home() {
+  const { data, isLoading } = useBanner({
+    onError: (err) => alert(err),
+  });
   return (
     <View style={styles.container}>
-      <Text style={styles.headline}>Welcome to React-Native-Web!</Text>
+      {isLoading ? <ActivityIndicator /> : null}
+      <Text style={styles.headline}>{data}</Text>
     </View>
   );
 }

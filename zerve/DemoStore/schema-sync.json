@@ -1,0 +1,67 @@
+{
+  "schemas": {
+    "QuestionAnswer": {
+      "additionalProperties": false,
+      "properties": {
+        "Question": {
+          "description": "",
+          "title": "",
+          "type": "null"
+        },
+        "Response": {
+          "description": "",
+          "title": "",
+          "type": "null"
+        }
+      },
+      "type": "object",
+      "$id": "https://type.zerve.link/QuestionAnswer"
+    },
+    "HumanText": {
+      "$id": "https://type.zerve.link/HumanText",
+      "title": "HumanText",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "text": {
+            "type": "string"
+          },
+          "bold": {
+            "type": "boolean"
+          },
+          "italic": {
+            "type": "boolean"
+          },
+          "strike": {
+            "type": "boolean"
+          },
+          "underline": {
+            "type": "boolean"
+          },
+          "code": {
+            "type": "boolean"
+          },
+          "linkHref": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+      },
+      "readOnly": true
+    }
+  },
+  "files": {
+    "Banner": {
+      "title": "Text",
+      "type": "string"
+    },
+    "Headline": {
+      "$ref": "https://type.zerve.link/HumanText",
+      "title": "HumanText"
+    }
+  }
+}

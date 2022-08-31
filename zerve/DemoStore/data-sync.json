@@ -1,0 +1,19 @@
+{
+  "Banner": "Hello, app! 2",
+  "Headline": [
+    {
+      "text": "Welcome to "
+    },
+    {
+      "bold": true,
+      "text": "Zerve Content"
+    },
+    {
+      "text": " editing in "
+    },
+    {
+      "bold": true,
+      "text": "React Native"
+    }
+  ]
+}
